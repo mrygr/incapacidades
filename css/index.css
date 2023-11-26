@@ -94,3 +94,30 @@ body {
     margin: 0;
     text-align: center;
 }
+
+/* Estilos para el menú de miga de pan */
+.breadcrumb {
+    background-color: #f8f9fa;
+    padding: 8px 15px;
+    margin-top: 80px; 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    padding: 0 5px;
+    color: #6c757d;
+}
+
+.breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}

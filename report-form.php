@@ -6,21 +6,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/report-form.css"> <!-- Nuevo archivo CSS para el formulario -->
+    <link rel="stylesheet" href="css/report-form.css">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="js/report-form.js"></script> <!-- Nuevo archivo JS para manejar la lógica del formulario -->
+    <script src="js/report-form.js"></script>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg">
         <div class="navbar-brand">
             <img src="img/user.png" alt="Foto del empleado" width="40" height="40">
-            <a href="#" class="d-none d-md-inline">Inicio</a>
+            <a href="#" class="d-none d-md-inline">Nombre colaborador</a>
         </div>
         <div class="navbar-nav">
             <a href="#" id="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
         </div>
     </nav>
+
+    <nav class="breadcrumb-container" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.php">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Reportar Incapacidad</li>
+        </ol>
+    </nav>    
 
     <div class="form-container">
         <form id="reportForm" enctype="multipart/form-data">
@@ -48,7 +55,6 @@
                 <input type="file" class="form-control" id="archivos" name="archivos[]" multiple accept=".pdf" required>
             </div>
             <div class="alert d-none">
-                <!-- Contenedor de la alerta. Agregamos la clase d-none para ocultarla inicialmente. -->
                 <p id="mensajeIncapacidad"></p>
             </div>
             <input type="submit" class="btn btn-primary" value="Enviar">
