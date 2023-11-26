@@ -31,7 +31,7 @@
             </a>
         </div>
         <div class="option-box">
-            <a href="ruta-para-reportar-incapacidad.html" class="option-link">
+            <a href="report-form.php" class="option-link">
                 <div class="option-image">
                     <img src="img/newinc.png" alt="Reportar Incapacidad">
                 </div>
