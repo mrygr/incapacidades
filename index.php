@@ -40,7 +40,6 @@
                 </div>
             </a>
         </div>
-        <!-- Agrega más opciones según sea necesario -->
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

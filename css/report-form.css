@@ -5,9 +5,14 @@
     max-width: 600px;
     margin: 180px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;*/
+    position: relative;
 }
 
 .form-group {
@@ -68,4 +73,108 @@ select.form-control {
 
 #mensajeIncapacidad {
     font-weight: normal;
+}
+
+/* Establece la posición y el estilo del contenedor de carga */
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+/* Establece el estilo del texto de carga */
+.loading-text {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; /* Alinea el texto al centro */
+    color: #000; /* Cambia el color del texto según tus preferencias */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 30px 0px 0px -80px;
+}
+
+/* Establece el estilo de la animación de carga */
+.loading {
+    /*border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;*/
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+}
+
+.loading:before {
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+.loading-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: #000; /* Cambia el color del número según tus preferencias */
+}
+
+/* Agrega una animación de giro al contorno del círculo */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+.success-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #28a745; /* Color de fondo verde */
+    color: #fff; /* Color del texto blanco */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.success-container p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.success-container::before {
+    content: '\2714'; /* Símbolo de marca de verificación Unicode */
+    font-size: 36px;
+    display: block;
+    margin: 10px auto;
 }
