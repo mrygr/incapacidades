@@ -135,4 +135,21 @@ $(document).ready(function () {
             }
         });
     });
+
+    // Asociar clic en el enlace al clic en el input file
+    $('#seleccionar-documentos').click(function (e) {
+        e.preventDefault();
+        $('#archivos').click();
+    });
+
+    // Actualizar el texto del enlace cuando se selecciona un archivo
+    $('#archivos').change(function () {
+        var archivos = $(this)[0].files;
+        if (archivos.length > 0) {
+            var plural = archivos.length > 1 ? 's' : '';
+            $('#seleccionar-documentos').text(archivos.length + ' documento' + plural + ' seleccionado' + plural);
+        } else {
+            $('#seleccionar-documentos').html('<i class="fas fa-upload"></i> Seleccionar documentos');
+        }
+    });    
 });

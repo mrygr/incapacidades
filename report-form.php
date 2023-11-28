@@ -30,14 +30,15 @@
     </nav>    
 
     <div class="form-container">
+        <h1>Reportar incapacidad</h1>
         <form id="reportForm" enctype="multipart/form-data">
         <!--<form id="reportForm" enctype="multipart/form-data" action="php/guardar_incapacidad.php" method="post">-->
             <div class="form-group">
-                <label for="nombre">Nombre Colaborador</label>
+            <label for="nombre"><i class="fas fa-user"></i> Nombre Colaborador:</label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required>
             </div>
             <div class="form-group">
-                <label for="identificacion">Identificación Colaborador</label>
+            <label for="identificacion"><i class="fas fa-id-card"></i> Identificación:</label>
                 <input type="text" class="form-control" id="identificacion" name="identificacion" required>
             </div>
             <div class="form-group">
@@ -52,8 +53,13 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="archivos">Subir Archivos en PDF</label>
-                <input type="file" class="form-control" id="archivos" name="archivos[]" multiple accept=".pdf" required>
+                <label for="archivos"> Soportes incapacidad en PDF:</label>
+                <div class="custom-file-upload">
+                    <input type="file" class="form-control" id="archivos" name="archivos[]" multiple accept=".pdf" style="display: none" required>
+                    <a href="#" id="seleccionar-documentos">
+                        <i class="fas fa-upload"></i> Seleccionar documentos
+                    </a>
+                </div>
             </div>
             <div class="alert d-none">
                 <p id="mensajeIncapacidad"></p>
