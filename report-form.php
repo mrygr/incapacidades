@@ -67,15 +67,16 @@
             <div class="loading"></div>
         </div>
                 
-        <!-- Contenedor de éxito -->
         <div class="success-container" id="success-container" style="display: none;">
-            <p id="mensajeExito"></p>
+            <div class="success-icon">
+                <span style="color: white; font-size: 40px;">✔</span>
+            </div>
+            <div class="success-text">Incapacidad Reportada Correctamente</div>
         </div>
 
         <!-- Contenedor de Error -->
-        <div class="error-container"></div>
-
-    </div>
+        <div class="error-container" style="display: none;"></div>
+    </div> 
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
