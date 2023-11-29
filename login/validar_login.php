@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verifica la contraseña encriptada
             if (password_verify($password, $hashed_password)) {
                 echo "Inicio de sesión exitoso. ¡Bienvenido, $username!";
-                header("Location: index.php");
+                header("Location: ../index.php");
                 exit();
             } else {
                 echo "Usuario o contraseña incorrectos. Inténtalo de nuevo.";
