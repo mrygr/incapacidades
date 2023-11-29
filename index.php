@@ -25,10 +25,12 @@
             <li class="breadcrumb-item active" aria-current="page"></li>
         </ol>
     </nav>-->    
-
+    <?php
+$id_colaborador = '10258547896'; // Debes tener una función o método que obtenga el id_colaborador
+?>
     <div class="options-container">
         <div class="option-box">
-            <a href="ruta-para-ver-incapacidades.html" class="option-link">
+            <a href="ver-incapacidades.php?id_colaborador=<?php echo $id_colaborador; ?>" class="option-link">
                 <div class="option-image">
                     <img src="img/shinc.png" alt="Ver Incapacidades">
                 </div>

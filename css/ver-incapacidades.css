@@ -1,0 +1,76 @@
+#incapacidades-table {
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-top: 180px;
+}
+
+#incapacidades-table th, #incapacidades-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#incapacidades-table th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos específicos para el campo Estado Incapacidad */
+#incapacidades-table td.estado-REPORTADA {
+    background-color: #FFEB3B; /* Amarillo Material Design */
+}
+
+/* Estilos generales para centrar la tabla */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#no-incapacidades-container {
+    display: none;
+    max-width: 400px;
+    margin: 50px auto 0;
+    text-align: center;
+    padding-top: 100px;
+}
+
+#no-incapacidades-container,
+#incapacidades-table {
+    display: none;
+}
+
+#no-incapacidades-container img {
+    opacity: 0.7; 
+}
+
+
+
+#crear-incapacidad-btn {
+    text-decoration: none;
+    color: inherit;
+    position: absolute;
+    /*bottom: 20px;*/
+    right: 150px;
+    /*margin-left: 550px;*/
+    background-color: #3498db;
+    color: #fff; 
+    border-radius: 5%;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #crear-incapacidad-btn:hover {
+    background-color: #2980b9; /* Cambia el color al pasar el ratón sobre el botón */
+  }
+  
+  #crear-incapacidad-btn i {
+    font-size: 24px; /* Tamaño del icono */
+    margin-right: 8px; /* Espaciado entre el icono y el texto */
+  }
+
+  
+
