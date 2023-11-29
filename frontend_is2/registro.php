@@ -15,8 +15,15 @@
 </head>
 
 <body>
-    <div class="container">
-        <form class="formulario" action="guardar_registro.php" method="post">
+    <div class="container-form sign-up">
+        <div class="welcome-back">
+            <div class="message">
+                
+                <h4>Si ya tienes una cuenta por favor inicia sesion aqui</h4>
+                <button class="sign-up-btn"><a href="../login/login.php">Iniciar Sesion</a></button>
+            </div>
+        </div>
+        <form class="formulario" action="valid_regis.php" method="post">
             <h2 class="create-account">Registro</h2>
             
             <input type="text" placeholder="Nombre" name="Nombre">
@@ -26,6 +33,7 @@
             <input type="submit" value="Registrarse">
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>

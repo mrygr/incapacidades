@@ -124,10 +124,10 @@ body {
 .formulario input[type="button"] {
     width: 60%;
     margin: auto;
-    border: solid thin #e74c3c;
+    border: solid thin white;
     padding: .7rem;
     border-radius: 2rem;
-    background-color: #e74c3c;
+    background-color: white;
     font-weight: 600;
     margin-top: 3rem;
     font-size: .8rem;
@@ -199,20 +199,3 @@ button {
 button:hover {
     background-color: #2980b9;
 }
-
-/* Estilos para el botón submit */
-input[type="submit"] {
-    background-color: #e74c3c; /* Fondo rojo */
-    color: white; /* Texto blanco */
-    padding: 10px 20px; /* Espaciado interior */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-    transition: background-color 0.3s ease; /* Transición suave al pasar por encima */
-  }
-  
-  /* Cambiar color al pasar por encima */
-  input[type="submit"]:hover {
-    background-color: #c0392b; /* Cambia a un tono más oscuro de rojo */
-  }
-  

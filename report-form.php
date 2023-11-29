@@ -15,7 +15,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="navbar-brand">
             <img src="img/user.png" alt="Foto del empleado" width="40" height="40">
-            <a href="#" class="d-none d-md-inline">Nombre colaborador</a>
+            <a href="#" class="d-none d-md-inline"></a>
         </div>
         <div class="navbar-nav">
             <a href="#" id="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>

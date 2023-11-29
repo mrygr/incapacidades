@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 28-11-2023 a las 04:42:14
+-- Tiempo de generación: 29-11-2023 a las 07:17:17
 -- Versión del servidor: 5.7.36
 -- Versión de PHP: 7.4.26
 
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `colaboradores` (
   `nombre_colaborador` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `email_colaborador` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `telefono_colaborador` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_colaborador`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `colaboradores` (
 --
 
 INSERT INTO `colaboradores` (`id_colaborador`, `nombre_colaborador`, `email_colaborador`, `telefono_colaborador`, `password`) VALUES
-('10258547896', 'Emanuel David Henao Giraldo', 'emanuel.giraldo3@gmail.com', '3245678901', ''),
+('10258547896', 'Emanuel David Henao Giraldo', 'emanuel.giraldo3@gmail.com', '3245678901', '$2y$10$RtHeoAXUThE4MvqSkdABY.6P/Org4VnuVLV./w/UywmmvuFOrrawm'),
 ('14567896541', 'Felipe Duran Zapata', 'fedaza@gmail.com', '3214567321', '');
 
 -- --------------------------------------------------------
@@ -61,7 +61,32 @@ CREATE TABLE IF NOT EXISTS `incapacidades` (
   `id_colaborador` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id_incapacidad`),
   KEY `colaboradorXincapacidad` (`id_colaborador`)
-) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=53 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `registro`
+--
+
+DROP TABLE IF EXISTS `registro`;
+CREATE TABLE IF NOT EXISTS `registro` (
+  `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `cedula` int(11) NOT NULL,
+  `email` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `contrasena` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  PRIMARY KEY (`cedula`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `registro`
+--
+
+INSERT INTO `registro` (`nombre`, `cedula`, `email`, `contrasena`) VALUES
+('yercin', 1088325831, 'yercin.gonzalez@utp.edu.co', '1234'),
+('yercin', 1088325832, 'yercin.gonzalez@utp.edu.c', ''),
+('Lucas', 12345, 'lucas@utp.edu.co', '1234');
 
 --
 -- Restricciones para tablas volcadas

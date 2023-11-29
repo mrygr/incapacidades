@@ -24,6 +24,7 @@ $sql = "INSERT INTO registro (nombre, cedula, email, contrasena) VALUES ('$nombr
 
 if ($conn->query($sql) === TRUE) {
     echo "Registro guardado exitosamente";
+    header("location: ../index.php");
 } else {
     echo "Error al guardar el registro: " . $conn->error;
 }
