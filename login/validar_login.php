@@ -4,16 +4,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $username = $_POST["username"];
         $password = $_POST["password"];
         
-        // Establece la conexión con la base de datos
-        $servername = "127.0.0.1";
-        $username_db = "tu_usuario";
+        // Hacer conexión con base de datos
+        $servername = "localhost";
+        $username_db = "root";
         $password_db = "tu_contraseña";
         $dbname = "incapacidades_empresa";
 
-        $conn = new mysqli($servername, $username_db, $password_db, $dbname);
+        $conn=mysqli_connect("localhost", "root", "", "incapacidades_empresa");
 
-        if ($conn->connect_error) {
-            die("La conexión ha fallado: " . $conn->connect_error);
+        if (!$conn) {
+            die("La conexión ha fallado: " . mysqli_connect_error());
         }
 
         // Obtiene los datos del usuario de la base de datos
@@ -27,19 +27,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Verifica la contraseña encriptada
             if (password_verify($password, $hashed_password)) {
                 echo "Inicio de sesión exitoso. ¡Bienvenido, $username!";
-                // Puedes redirigir a otra página después de un inicio de sesión exitoso usando header()
-                // header("Location: otra_pagina.php");
-                // exit();
+                header("Location: index.php");
+                exit();
             } else {
                 echo "Usuario o contraseña incorrectos. Inténtalo de nuevo.";
+                header("Location: login.php");
+                exit();
             }
         } else {
             echo "Usuario no encontrado.";
+            header("Location: login.php");
+            exit();
         }
 
         $conn->close();
     } else {
         echo "Por favor, proporciona un nombre de usuario y contraseña.";
+        header("Location: login.php");
+        exit();
     }
 }
 ?>
