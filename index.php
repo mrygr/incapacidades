@@ -16,6 +16,18 @@
         </div>
         <div class="navbar-nav">
             <a href="#" id="cerrar-sesion"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script>
+        $(document).ready(function() {
+    // Agregar evento de clic al enlace de cerrar sesión
+         $('#cerrar-sesion').on('click', function(e) {
+        e.preventDefault(); // Prevenir el comportamiento predeterminado del enlace
+
+        // Redirigir a la página de inicio de sesión (cambiar 'login.php' por tu ruta correcta)
+        window.location.href = 'login/login.php';
+    });
+});
+</script>
         </div>
     </nav>
 
